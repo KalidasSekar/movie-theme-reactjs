@@ -184,7 +184,7 @@ function Ratings({ movie_name, movie_pic, movie_ratings, movie_discription, dele
       <div className="container">
         <div className="imageContainer"><img className="moviePics" src={movie_pic} alt="images" ></img></div>
         <div className="reviews">
-          <img className="logo" src="https://www.logolynx.com/images/logolynx/8d/8d484bb380fdae2da5bc125a4c513393.png"></img>
+          <img className="logo" src="https://www.logolynx.com/images/logolynx/8d/8d484bb380fdae2da5bc125a4c513393.png" alt="IMDB"></img>
           <h4>⭐️{movie_ratings}</h4>
           <Counter />
         </div>
