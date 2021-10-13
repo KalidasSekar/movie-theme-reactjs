@@ -25,7 +25,7 @@ code {
 }
 .imdb{
   display: flex;
-  /* border: 1px solid; */
+  margin-top: 0px;
   width: 100%;
   height: auto;
   justify-content:inherit;
