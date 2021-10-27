@@ -80,14 +80,13 @@ const movieList = [
 
 ];
 
-const getFromStorage(key) => JSON.parse(localStorage.getItem(key));
+const getFromStorage = (key) => JSON.parse(localStorage.getItem(key));
 
 localStorage.setItem("movies", JSON.stringify(movieList));
 
 export default function App() {
 
-  const [NewMovieList, setNewList] = useState(getFromStorage("movies"))
-  );
+  const [NewMovieList, setNewList] = useState(getFromStorage("movies"));
 
   const [movieName, setMovieName] = useState("");
   const [moviePic, setMoviePic] = useState("");
@@ -104,6 +103,7 @@ export default function App() {
     };
     setNewList([...NewMovieList, newMovie]);
   };
+
 
   return (
     <section>
@@ -199,7 +199,7 @@ function MovieDetails() {
   const movie = getFromStorage("movies");
   return (
 
-    <h1>{movies.name} Movie Details {id} </h1>
+    <h1>Movie Details {id} </h1>
   );
 }
 
