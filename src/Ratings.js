@@ -7,16 +7,18 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import InfoIcon from '@mui/icons-material/Info';
 import { useHistory } from 'react-router';
+import Card from '@mui/material/Card';
 
 
 
-export function Ratings({ movie_name, movie_pic, movie_ratings, movie_discription, deleteButton, id }) {
+export function Ratings({ movie_name, movie_pic, movie_ratings, movie_discription, deleteButton, id, editButton }) {
 
     const [show, setShow] = useState(false);
     const styles = { display: show ? "block" : "none" };
 
     const history = useHistory();
     return (
+
         <div className="section">
             <div className="container">
                 <div className="imageContainer"><img className="moviePics" src={movie_pic} alt="images"></img></div>
@@ -27,32 +29,33 @@ export function Ratings({ movie_name, movie_pic, movie_ratings, movie_discriptio
                 </div>
 
                 <hr></hr>
-                <CardContent>
-                    <h3 className="movie_name">
-                        {movie_name}
-                        <IconButton
-                            onClick={() => history.push("/movies/" + id)}
-                            color="primary"
-                            aria-label="Detailed info about movie"
-                        >
-                            <InfoIcon />
-                        </IconButton>
-                        <IconButton
-                            onClick={() => setShow(!show)}
-                            color="primary"
-                            aria-label="Movie Description"
-                        >
-                            {show ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-                        </IconButton>
-                    </h3>
-                    {show ? <h5 className="discription">{movie_discription}</h5> : ""}
+                <Card >
+                    <CardContent>
+                        <h3 className="movie_name">
+                            {movie_name}
+                            <IconButton
+                                onClick={() => history.push("/movies/" + id)}
+                                color="primary"
+                                aria-label="Detailed info about movie"
+                            >
+                                <InfoIcon />
+                            </IconButton>
+                            <IconButton
+                                onClick={() => setShow(!show)}
+                                color="primary"
+                                aria-label="Movie Description"
+                            >
+                                {show ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+                            </IconButton>
+                        </h3>
+                        {show ? <h5 className="discription">{movie_discription}</h5> : ""}
 
-                </CardContent>
-                <CardActions>
-
-                    {deleteButton}
-                </CardActions>
-
+                    </CardContent>
+                    <CardActions>
+                        {editButton}
+                        {deleteButton}
+                    </CardActions>
+                </Card>
             </div>
         </div >
     );

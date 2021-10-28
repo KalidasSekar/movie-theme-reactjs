@@ -1,7 +1,8 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merienda&display=swap');
 
 body {
-  margin: 0;
+  margin: 0rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -9,9 +10,26 @@ body {
   -moz-osx-font-smoothing: grayscale; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main-menu{
+  background-color: rgba(31, 18, 1, 0.808);
+  color: white;
+  display: flex;
+  text-transform: uppercase;
+  gap: 3rem;
+  justify-content:right;
+}
+
+.main-menu > a{
+  font-family: Roboto;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover{
+  color: rgba(247, 162, 6, 0.959);
+  transition: ease-in-out;
+  transform : scale(1.1);
+  transition: 0.5s;
 }
 
 .App{
@@ -24,12 +42,7 @@ code {
 }
 .imdb{
   display: flex;
-  margin-top: 0px;
-  width: 100%;
-  height: auto;
-  justify-content:inherit;
-  padding: 5px;
-  flex-wrap: wrap;
+  margin-right: 0px;
 }
 
 
@@ -41,10 +54,6 @@ code {
   color: black;
   margin: 10px;
   flex-wrap: wrap;
-}
-
-nav{
-  color: black;
 }
 
 .addItems{
@@ -71,7 +80,7 @@ nav{
 }
 .section{
   display: flex;
-  margin: 10px;
+  margin: 5px;
   margin-top: 0px;
   justify-content: center;
   position: relative;
@@ -86,7 +95,6 @@ nav{
    height: auto;
    margin-top: 0rem;
    margin-right: 0px;
-   border-right: 6px solid wheat;
    background-color: white;
    box-shadow: -1px 10px 4px -4px rgba(0,0,0,0.75);
 -webkit-box-shadow: -1px 10px 4px -4px rgba(0,0,0,0.75);
@@ -195,3 +203,17 @@ h4{
   background-color: red;
   color:white;
 }
+
+.movieDetail{
+  max-width: 50rem;
+  margin: 2rem;
+}
+
+.main-content{
+  margin-top: 1rem;
+}
+
+.movie-info{
+  display: flex;
+}
+
