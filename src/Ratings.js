@@ -14,7 +14,6 @@ import Card from '@mui/material/Card';
 export function Ratings({ movie_name, movie_pic, movie_ratings, movie_discription, deleteButton, id, editButton }) {
 
     const [show, setShow] = useState(false);
-    const styles = { display: show ? "block" : "none" };
 
     const history = useHistory();
     return (
