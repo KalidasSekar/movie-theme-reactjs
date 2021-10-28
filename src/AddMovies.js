@@ -29,7 +29,7 @@ export function AddMovies({ NewMovieList, setNewList, type }) {
     };
 
     return (<Card>
-        <div className="addItems">
+        <div className="addItem">
             <TextField
                 value={movieName}
                 onChange={event => setMovieName(event.target.value)}
