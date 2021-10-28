@@ -2,8 +2,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Card from '@mui/material/Card';
 import { useState } from "react";
-import { getFromStorage, updateStoredMovies } from "./App";
-import { useParams } from 'react-router-dom';
+import { updateStoredMovies } from "./App";
 import { useHistory } from 'react-router';
 
 export function AddMovies({ NewMovieList, setNewList, type }) {
