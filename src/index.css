@@ -14,15 +14,17 @@ body {
   background-color: rgba(31, 18, 1, 0.808);
   color: white;
   display: flex;
+  justify-content: right;
   text-transform: uppercase;
-  gap: 3rem;
-  justify-content:right;
+  gap: 1.5rem;
+  
 }
 
 .main-menu > a{
   font-family: Roboto;
   text-decoration: none;
   color: white;
+  
 }
 
 a:hover{
@@ -88,6 +90,7 @@ a:hover{
   height: auto;
   
 }
+
 
 .container{
    border: none;
@@ -205,15 +208,70 @@ h4{
 }
 
 .movieDetail{
-  width: 55rem;
-  margin: 2rem;
+  margin: 10px;
 }
 
 .main-content{
-  margin-top: 1rem;
+  margin: 1rem;
+}
+
+
+.home-banner{
+  width: 100%;
+  height: 50rem;
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/a1a5d7dc-aedf-4570-b58d-693af16e1445/01c1ea38-b8f6-4642-bc7c-258b9c1d1b5e/IN-en-20211020-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 103px 102px 400px 112px rgba(0,0,0,0.87) inset;
+-webkit-box-shadow: 103px 102px 400px 112px rgba(0,0,0,0.87) inset;
+-moz-box-shadow: 103px 102px 400px 112px rgba(0,0,0,0.87) inset;
+  z-index: 2;
+  align-items: center;
+}
+
+.home-content{
+  color: white;
+  height: 20rem;
+  width: auto;
+}
+
+.home-content{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title1{
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.title2{
+  font-size: 2.5rem;
+}
+
+
+@media (max-width : 300px){
+.main-menu{
+  justify-content: left;
+  gap: 1rem;
+  
 }
 
 .movie-info{
   display: flex;
+  flex-direction: column;
+  max-width: 50rem;
 }
 
+}
+
+@media (max-width : 400px){
+.main-menu > a{
+  font-size: 12px;
+  
+}
+.imdb img{
+  height: 2rem;
+}
+}

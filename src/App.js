@@ -22,7 +22,7 @@ export default function App() {
   const history = useHistory();
   return (
     <section>
-      <AppBar position="static">
+      <AppBar position="static" className="main-menu">
         <Toolbar className="main-menu">
           <div className="imdb"><img src="https://www.logolynx.com/images/logolynx/8d/8d484bb380fdae2da5bc125a4c513393.png" height="50px" alt="imdb-logo"></img>
           </div>
@@ -35,7 +35,8 @@ export default function App() {
       <div className="main-content">
         <Switch>
           <Route path exact="/">
-            <HomeBanner></HomeBanner>
+            <HomeBanner>
+            </HomeBanner>
           </Route>
           <Route path="/movies/edit/:id">
             <EditMovie NewMovieList={NewMovieList} setNewList={setNewList} type="EDIT" />

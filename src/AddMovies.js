@@ -4,6 +4,7 @@ import Card from '@mui/material/Card';
 import { useState } from "react";
 import { updateStoredMovies } from "./App";
 import { useHistory } from 'react-router';
+import Alert from '@mui/material/Alert';
 
 export function AddMovies({ NewMovieList, setNewList, type }) {
     const history = useHistory();
@@ -24,19 +25,42 @@ export function AddMovies({ NewMovieList, setNewList, type }) {
         setNewList([...NewMovieList, newMovie]);
         updateStoredMovies([...NewMovieList, newMovie]);
         history.push("/movies");
+        alert("Successfully movie has been added");
     };
 
     return (<Card>
         <div className="addItems">
-            <TextField value={movieName} onChange={event => setMovieName(event.target.value)} label="Enter Movie Name" variant="outlined" />
-            <TextField value={moviePic} onChange={event => setMoviePic(event.target.value)} label="Enter Movie Pic" variant="outlined" />
-            <TextField value={movieRatings} onChange={event => setMovieRatings(event.target.value)} label="Your Ratings" variant="outlined" />
-            <TextField value={movieDiscription} onChange={event => setMovieDiscription(event.target.value)} label="Description" variant="outlined" />
-            <TextField value={movieTrailer} onChange={event => setMovieTrailer(event.target.value)} label="Movie Trailer" variant="outlined" />
+            <TextField
+                value={movieName}
+                onChange={event => setMovieName(event.target.value)}
+                label="Enter Movie Name"
+                variant="outlined" />
 
-            {type === "EDIT" ? (
-                <Button className="addButton" onClick={addMovies} variant="contained">Edit Movie</Button>)
-                : (<Button className="addButton" onClick={addMovies} variant="contained">Add Movie</Button>)}
+            <TextField
+                value={moviePic}
+                onChange={event => setMoviePic(event.target.value)}
+                label="Enter Movie Pic"
+                variant="outlined" />
+
+            <TextField
+                value={movieRatings}
+                onChange={event => setMovieRatings(event.target.value)}
+                label="Your Ratings"
+                variant="outlined" />
+
+            <TextField
+                value={movieDiscription}
+                onChange={event => setMovieDiscription(event.target.value)}
+                label="Description"
+                variant="outlined" />
+
+            <TextField
+                value={movieTrailer}
+                onChange={event => setMovieTrailer(event.target.value)}
+                label="Movie Trailer"
+                variant="outlined" />
+
+            <Button className="addButton" onClick={addMovies} variant="contained">Add Movie</Button>
 
         </div>
     </Card>);

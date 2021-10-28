@@ -34,6 +34,7 @@ export function EditMovie({ NewMovieList, setNewList, type }) {
         setNewList(updatedMovies);
         updateStoredMovies(updatedMovies); //replacing
         history.push("/movies");
+        alert("Successfully movie has been edited");
     };
 
     return (<Card>
