@@ -4,7 +4,6 @@ import Card from '@mui/material/Card';
 import { useState } from "react";
 import { updateStoredMovies } from "./App";
 import { useHistory } from 'react-router';
-import Alert from '@mui/material/Alert';
 
 export function AddMovies({ NewMovieList, setNewList, type }) {
     const history = useHistory();
