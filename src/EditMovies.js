@@ -38,7 +38,7 @@ export function EditMovie({ NewMovieList, setNewList, type }) {
     };
 
     return (<Card>
-        <div className="addItems">
+        <div className="addItem">
             <TextField value={movieName} onChange={event => setMovieName(event.target.value)} label="Enter Movie Name" variant="outlined" />
             <TextField value={moviePic} onChange={event => setMoviePic(event.target.value)} label="Enter Movie Pic" variant="outlined" />
             <TextField value={movieRatings} onChange={event => setMovieRatings(event.target.value)} label="Your Ratings" variant="outlined" />
