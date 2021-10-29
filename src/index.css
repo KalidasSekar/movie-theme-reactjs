@@ -58,12 +58,12 @@ a:hover{
   flex-wrap: wrap;
 }
 
-.addItems{
+.addItem{
     width: auto;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 10px;
+    padding: 20px;
 }
 
 .addButton{
